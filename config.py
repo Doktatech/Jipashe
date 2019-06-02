@@ -9,3 +9,18 @@ class Config:
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     UPLOADED_PHOTOS_DEST ='app/static/photos'
+class ProdConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_MAUVE_URL")
+    
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://zamzam:Ilovememore100@localhost/personalblog'
+    DEBUG = True
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig,
+'test':TestConfig
+}    
