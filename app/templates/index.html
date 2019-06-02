@@ -1,0 +1,29 @@
+{% extends 'base.html' %}    
+    {% block content %}
+<div class="container-fluid">
+    <div  style="background-color: inherit; background-attachment: fixed; height: 100%; padding-top: 130px;" class="row">
+        
+        <div class="col-md-2">
+        
+        </div>
+        <div class="col-md-8">
+        <div style="" class="row">
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://www.hot97.com/sites/g/files/exi706/f/styles/teaser_350x200/public/article-images-featured/981699508-594x594.jpg?itok=Fifr9RnG" alt="">
+                    <div class="overlay">
+                        <h2>Music</h2>
+                        <a class="info" href="{{ url_for('main.music') }}"> Blogs </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://i0.wp.com/www.comicmix.com//wp-content/uploads/2016/12/moana-fallback_fde4d101.jpeg?resize=350%2C200" alt="">
+                    <div class="overlay">
+                        <h2>Animations</h2>
+                        <a class="info" href="{{ url_for('main.animations') }}">Blogs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
