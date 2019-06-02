@@ -28,7 +28,7 @@
                                 <br>
                                 <div><a href="/comment/new/{{adventure.id}}"> <button class="btn btn-outline-info btn-sm">Comment</button> </a> </div>
                                 {% if current_user.is_authenticated %}
-                                    <p><a href="/delete/{{ adventure.id}}">Delete Blog</a></p>
+                                    <p><a href="/delete/{{ adventure.id}}">Remove Blog</a></p>
                                 
                                 {% endif %}
                                 </div>
@@ -45,6 +45,6 @@
 
     </div>       
 </div>
-<p style="text-align: center; font-family: 'Courgette', cursive;"> &copy; Copyright Rewel K</p>
+<p style="text-align: center; font-family: 'Courgette', cursive;"> &copy; Copyright Rewel Kinyanjui</p>
 {% endblock%}
     
