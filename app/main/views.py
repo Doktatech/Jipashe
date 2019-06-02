@@ -108,7 +108,7 @@ def animations(category = "Animations"):
 
     animations = Post.query.filter_by(category = "Animations")
     
-   #  title = "Animations Blogs" THIS ONE
+   title = "Animations Blogs" THIS ONE
     return render_template('animations.html', animations= animations, title=title, post ='New Post')
 
 
