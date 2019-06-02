@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Jipashe
+We are proud that you have decided to become part of our family.We can guarantee you that you will like our company. Thank you
