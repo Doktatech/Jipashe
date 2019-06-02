@@ -7,3 +7,7 @@ class PostForm(FlaskForm):
     category= SelectField('Blog Category', choices=[('Select a category', 'Select a category'),('Music', 'Music'),('Adventures', 'Adventures'),('Animations', 'Animations'),('Fashion', 'Fashion'),('Nature', 'Nature'),('Celebrity', 'Celebrity'),('Frenemies', 'Frenemies'),('Feuds', 'Feuds'),('New cars', 'New cars')])
     content = TextAreaField('The Blog...')
     submit = SubmitField('Post')
+class CommentForm(FlaskForm):
+
+    comment = TextAreaField('Post Of The Comment')
+    submit = SubmitField('Submit')
