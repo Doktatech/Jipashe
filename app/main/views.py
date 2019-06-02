@@ -118,7 +118,7 @@ def adventure(category = "Adventures"):
 
     adventures = Post.query.filter_by(category = "Adventures")
     
-   #  title = "Adventures Blogs" THIS ONE
+    title = "Adventures Blogs" THIS ONE
     return render_template('adventure.html', adventures= adventures, title=title, post ='New Post')
 
 
