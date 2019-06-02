@@ -141,15 +141,15 @@ def nature(category = "Nature"):
     title = "Nature Blogs"
     return render_template('nature.html', natures= natures, title=title, post ='New Post')
 
-@main.route('/fashion/new', methods=['GET','POST'])
-@login_required
-def fashion(category = "Fashion"):
+# @main.route('/fashion/new', methods=['GET','POST'])
+# # @login_required
+# # def fashion(category = "Fashion"):
 
-    fashions = Post.query.filter_by(category = "Fashion")
+# #     fashions = Post.query.filter_by(category = "Fashion")
     
-    title = "Fashion Blogs"
+# #     title = "Fashion Blogs"
     
-    return render_template('fashion.html', fashions= fashions, title=title, post ='New Post')
+# #     return render_template('fashion.html', fashions= fashions, title=title, post ='New Post')
 
 @main.route('/frenemies/new', methods=['GET','POST'])
 @login_required
@@ -176,20 +176,20 @@ def feuds(category = "Feuds"):
 
 
 @main.route('/newcars/new', methods=['GET','POST'])
-# @login_required
-# def newcars(category = "New cars"): 
-#    # THIS ONE
-#    #  newcarss = Post.query.filter_by(category = "New cars")
+@login_required
+def newcars(category = "New cars"): 
+   # THIS ONE
+   #  newcarss = Post.query.filter_by(category = "New cars")
     
-#     title = "New cars Blogs"
+    title = "New cars Blogs"
     
-#     return render_template('newcars.html', newcarss= newcarss, title=title, post ='New Post')
+    return render_template('newcars.html', newcarss= newcarss, title=title, post ='New Post')
 
-# @main.route('/delete/<int:id>',methods=['GET','POST'])
-# @login_required
-# def delete(id):
-#    del_post = Post.query.filter_by(id=id).first()
-#    # db.session.delete(del_post) THIS ONE
-#    db.session.commit()
+@main.route('/delete/<int:id>',methods=['GET','POST'])
+@login_required
+def delete(id):
+   del_post = Post.query.filter_by(id=id).first()
+   # db.session.delete(del_post) THIS ONE
+   db.session.commit()
    
-#    return redirect(url_for('main.index'))
+   return redirect(url_for('main.index'))
