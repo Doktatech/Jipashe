@@ -79,13 +79,13 @@ def new_post():
 def new_comment(id):
     form = CommentForm()
 
-   #  if form.validate_on_submit( THIS ONE):
+    if form.validate_on_submit( THIS ONE):
         
         comment_content = form.comment.data
 
         comment = Comment(comment_content= comment_content, post_id=id)
 
-        # post.save_post(post)
+        #post.save_post(post)
         db.session.add(comment)
         db.session.commit()
         
@@ -96,7 +96,7 @@ def new_comment(id):
 @login_required
 def music(category = "Music"):
 
-   #  musics = Post.query.filter_by(category = "Music" THIS ONE)
+    musics = Post.query.filter_by(category = "Music" )
     
     title = "Music Blogs"
     return render_template('music.html', musics= musics, title=title, post ='New Post')
