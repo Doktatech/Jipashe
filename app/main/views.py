@@ -141,15 +141,15 @@ def nature(category = "Nature"):
     title = "Nature Blogs"
     return render_template('nature.html', natures= natures, title=title, post ='New Post')
 
-# @main.route('/fashion/new', methods=['GET','POST'])
-# # @login_required
-# # def fashion(category = "Fashion"):
+@main.route('/fashion/new', methods=['GET','POST'])
+@login_required
+def fashion(category = "Fashion"):
 
-# #     fashions = Post.query.filter_by(category = "Fashion")
+    fashions = Post.query.filter_by(category = "Fashion")
     
-# #     title = "Fashion Blogs"
+    title = "Fashion Blogs"
     
-# #     return render_template('fashion.html', fashions= fashions, title=title, post ='New Post')
+    return render_template('fashion.html', fashions= fashions, title=title, post ='New Post')
 
 @main.route('/frenemies/new', methods=['GET','POST'])
 @login_required
