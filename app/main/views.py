@@ -13,9 +13,14 @@ app = Flask(__name__)
 @main.route("/")
 def index():
    '''
-   title = "Post Perfect"
+   title = "Jipashe News"
    '''
-   title = 'Post Perfect'
+   title = 'Jipashe News'
    posts = Post.query.all()
 
    return render_template('index.html', title= title, posts = posts)
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(username = uname).first()
+
+    return render_template("profile/profile.html", user = user)
