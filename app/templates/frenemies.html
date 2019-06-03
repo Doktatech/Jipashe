@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="container-fluid">
+    <div  style=" padding-bottom: 130px; padding-top: 130px;" class="row">
+        <div class= "col-md-2">
+            <a href="{{ url_for('main.new_post') }}"><button style="color: black;" class="btn btn-outline-info btn-sm">Post a blog</button></a>
+        </div>
+        <div class= "col-md-8">
+                <h3 style="font-family: 'Courgette', cursive;">{{ title}}</h3>
+            {% for frenemies in frenemiess %} 
+                    <div style="background-color:#b3d7ef;" class="card">
+                        <article class="media content-section">
+                            <div class="card-title">
+                                <div class="article-metadata">
+                                
+                                </div>
+                                <div class="card-body">
+                                <small> {{ frenemies.posted_on }}</small>
+                                <h5> {{ frenemies.title }} </h5>
+                                
+                                <p> {{ frenemies.content }}</p>
+                                <small><a href="#"><button class="btn btn-outline-success btn-sm"> <img src="https://summericeworld.files.wordpress.com/2015/06/smiley-face-clip-art-thumbs-up-clipart-two-thumbs-up-happy-smiley-emoticon-512x512-eec61.png" height="20px"></button></a>  <a href="#"><button class="btn btn-outline-warning btn-sm"> <img src="http://clipart-library.com/images/gTe5xoLpc.gif" height="20px"></button></a></small>
+                                <br>
+                                <br>
+                                <p><a href="/comment/new/{{frenemies.id}}"> <button class="btn btn-outline-info btn-sm">Comment</button> </a> 
+                                {% if current_user.is_authenticated %}
+                                    <a href="/delete/{{ frenemies.id}}"><button class="btn btn-outline-danger btn-sm"> <img src="https://cdn0.iconfinder.com/data/icons/ikooni-outline-free-basic/128/free-27-128.png" height="20px"> </button></a>
+                                
+                                {% endif %}
+                                </p>
+                                
+                                </div>
+                                
+                            </div>
+                        </article>
+                    </div>   
+                {% endfor %}            
+        </div>
+        <div class= "col-md-2">
+        
+        </div>
+    
+
+    </div>       
+</div>
+<p style="text-align: center; font-family: 'Courgette', cursive;"> &copy; Copyright Rewel Kinyanjui </p>
+{% endblock%}
+    

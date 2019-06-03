@@ -1,4 +1,5 @@
-{% extends 'base.html' %}    
+{% extends 'base.html' %}
+    <body>
     {% block content %}
 <div class="container-fluid">
     <div  style="background-color: inherit; background-attachment: fixed; height: 100%; padding-top: 130px;" class="row">
@@ -10,20 +11,106 @@
         <div style="" class="row">
             <div class="col-md-4">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="https://www.hot97.com/sites/g/files/exi706/f/styles/teaser_350x200/public/article-images-featured/981699508-594x594.jpg?itok=Fifr9RnG" alt="">
+                    <img class="img-responsive" src="https://www.marketingmag.com.au/wp-content/uploads/2013/08/stereosonic-slider-music.jpg" alt="">
                     <div class="overlay">
                         <h2>Music</h2>
-                        <a class="info" href="{{ url_for('main.music') }}"> Blogs </a>
+                        <a class="info" href="{{ url_for('main.music') }}">BLOGS</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="https://i0.wp.com/www.comicmix.com//wp-content/uploads/2016/12/moana-fallback_fde4d101.jpeg?resize=350%2C200" alt="">
+                    <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStFq7otZcha3JXM7rXVIHVD5Sl6pNqUjbGNckyRiGv9YqIpA6r1Q" alt="">
                     <div class="overlay">
                         <h2>Animations</h2>
-                        <a class="info" href="{{ url_for('main.animations') }}">Blogs</a>
+                        <a class="info" href="{{ url_for('main.animations') }}">BLOGS</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://i.ytimg.com/vi/rnLMax5LjXY/maxresdefault.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Adventures</h2>
+                        <a class="info" href="{{ url_for('main.adventure') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <br>
+        </br>
+        <div style="" class="row">
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0F4vLGZQ-2muUII6_ofNlSSQyEPp9Yt4nibiFrHVHisLFjTRzg" alt="">
+                    <div class="overlay">
+                        <h2>Celebrity</h2>
+                        <a class="info" href="{{ url_for('main.celebrity') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://static1.squarespace.com/static/5925bda83a0411489c83e89f/t/59d3b5f0cd0f68227f4242ad/1551314238482/?format=1500w" alt="">
+                    <div class="overlay">
+                        <h2>Nature</h2>
+                        <a class="info" href="{{ url_for('main.nature') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/fashion-logo-design.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Fashion</h2>
+                        <a class="info" href="{{ url_for('main.fashion') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <br>
+        </br>
+        <div style="" class="row">
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ZwR_QYuLRPmabmbH1KPBpmKcL8OrVVS6xr2UyOnOpV_lt_z6" alt="">
+                    <div class="overlay">
+                        <h2>Frienemies</h2>
+                        <a class="info" href="{{ url_for('main.frenemies') }}"> BLOGS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://cacm.acm.org/system/assets/0003/0717/032818_Shana_Novak_Getty_Images_battlingbots.large.jpg?1522255894&1522255893" alt="">
+                    <div class="overlay">
+                        <h2>Feuds</h2>
+                        <a class="info" href="{{ url_for('main.feuds') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="https://media.architecturaldigest.com/photos/5ced629704c41e1a9b9a8bcf/master/pass/Bugatti-LVN-7%20%5BBugatti%5D.jpg" alt="">
+                    <div class="overlay">
+                        <h2>New cars</h2>
+                        <a class="info" href="{{ url_for('main.newcars') }}">BLOGS</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+         
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+
+    
+</div> 
+<p style="text-align: center; font-family: 'Courgette', cursive;"> &copy; Copyright Rewel Kinyanjui </p> 
+{% endblock  %}
+    </body>
