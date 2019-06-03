@@ -79,7 +79,7 @@ def new_post():
 def new_comment(id):
     form = CommentForm()
 
-    if form.validate_on_submit( THIS ONE):
+    if form.validate_on_submit():
         
         comment_content = form.comment.data
 
@@ -108,7 +108,7 @@ def animations(category = "Animations"):
 
     animations = Post.query.filter_by(category = "Animations")
     
-   title = "Animations Blogs" THIS ONE
+    title = "Animations Blogs" 
     return render_template('animations.html', animations= animations, title=title, post ='New Post')
 
 
@@ -118,7 +118,7 @@ def adventure(category = "Adventures"):
 
     adventures = Post.query.filter_by(category = "Adventures")
     
-    title = "Adventures Blogs" THIS ONE
+    title = "Adventures Blogs" 
     return render_template('adventure.html', adventures= adventures, title=title, post ='New Post')
 
 
@@ -178,8 +178,8 @@ def feuds(category = "Feuds"):
 @main.route('/newcars/new', methods=['GET','POST'])
 @login_required
 def newcars(category = "New cars"): 
-   # THIS ONE
-   #  newcarss = Post.query.filter_by(category = "New cars")
+   
+    newcarss = Post.query.filter_by(category = "New cars")
     
     title = "New cars Blogs"
     
@@ -188,8 +188,8 @@ def newcars(category = "New cars"):
 @main.route('/delete/<int:id>',methods=['GET','POST'])
 @login_required
 def delete(id):
-   del_post = Post.query.filter_by(id=id).first()
-   # db.session.delete(del_post) THIS ONE
-   db.session.commit()
+    del_post = Post.query.filter_by(id=id).first()
+    db.session.delete(del_post)
+    db.session.commit()
    
-   return redirect(url_for('main.index'))
+    return redirect(url_for('main.index'))
