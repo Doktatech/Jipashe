@@ -20,6 +20,7 @@ class User(UserMixin, db.Model):
 
     posts = db.relationship('Post',backref='user',lazy='dynamic')
     comments = db.relationship('Comment', backref = 'comment', lazy= "dynamic")
+
     @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
@@ -34,3 +35,36 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'{self.username}'
+
+class Post(db.Model):
+    __tablename__ = 'post'
+
+    id = db.Column(db.Integer,primary_key = True)
+    title = db.Column(db.String(255))
+    content = db.Column(db.String())
+    category = db.Column(db.String(255))
+    
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    post_id = db.relationship('Comment', backref = 'comments', lazy= "dynamic")
+       
+    def delete_post(self):
+           db.session.delete()
+           db.session.commit()
+
+    def __repr__(self):
+        return f'{self.title}'
+
+class Comment(db.Model):
+    __tablename__='comments'
+
+    id = db.Column(db.Integer,primary_key=True)
+    comment_content = db.Column(db.String())
+    post_id = db.Column(db.Integer,db.ForeignKey('post.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+
+
+    def __repr__(self):
+        return f'{self.comment}'  
+
+
+
